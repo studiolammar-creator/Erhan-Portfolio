@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Carbon Footprint Dashboard — Case Study by Erhan Lammar. Designing a sustainability metrics UI for a green-tech startup." />
-  <title>Carbon Footprint Dashboard — Erhan Lammar</title>
+  <meta name="description" content="Degroof Petercam — Case Study by Erhan Lammar. UI design for investment evolution and design system." />
+  <title>Degroof Petercam — Erhan Lammar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -48,7 +48,7 @@
           <span class="cs-hero__tag">UI Design</span>
         </div>
 
-        <h1 class="cs-hero__title" id="cs-title">Carbon Footprint Dashboard</h1>
+        <h1 class="cs-hero__title" id="cs-title">Degroof Petercam</h1>
         <p class="cs-hero__summary">
           Turning dense carbon emissions data into clear, actionable insight — a sustainability metrics UI designed for non-technical users at a green-tech startup.
         </p>
@@ -59,8 +59,8 @@
             <dd class="cs-meta-item__value">Lead UI Designer</dd>
           </div>
           <div class="cs-meta-item">
-            <dt class="cs-meta-item__label">Year</dt>
-            <dd class="cs-meta-item__value">2024</dd>
+            <dt class="cs-meta-item__label">Client</dt>
+            <dd class="cs-meta-item__value">Degroof Petercam</dd>
           </div>
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Team</dt>
@@ -68,7 +68,7 @@
           </div>
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Tools</dt>
-            <dd class="cs-meta-item__value">Figma · Recharts · Observable</dd>
+            <dd class="cs-meta-item__value">Figma · Claude Code · Cursor</dd>
           </div>
         </dl>
 
@@ -85,6 +85,7 @@
             <a href="#information-architecture" class="cs-sidebar__link">IA & Hierarchy</a>
             <a href="#charts" class="cs-sidebar__link">Chart Design</a>
             <a href="#sustainability" class="cs-sidebar__link">Sustainable UI</a>
+            <a href="#figma-files" class="cs-sidebar__link">Figma Files</a>
             <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
           </aside>
 
@@ -126,7 +127,7 @@
                 <p>The original dashboard served neither. We designed for both — starting with the sustainability manager as the primary user, with progressive disclosure paths into the detail that finance users needed.</p>
               </div>
 
-              <div class="cs-image-block" role="img" aria-label="User persona cards placeholder — Sustainability Manager vs Finance Director, showing different goals and mental models">
+              <div class="cs-image-block" role="img" aria-label="User persona cards — Sustainability Manager vs Finance Director, showing different goals and mental models">
                 User personas — primary and secondary
               </div>
             </section>
@@ -179,12 +180,12 @@
                 <p>Colour was given systematic meaning: green for on-track or improved, amber for at-risk, and a neutral palette for everything else. Red was reserved only for "exceeded limit" states. Colour was never the only signal — every status had a text label and an icon.</p>
               </div>
 
-              <div class="cs-image-block" role="img" aria-label="Dashboard chart designs placeholder — stacked area chart showing scope emissions over time with consistent colour system">
+              <div class="cs-image-block" role="img" aria-label="Dashboard chart designs — stacked area chart showing scope emissions over time with consistent colour system">
                 Dashboard chart system
               </div>
 
               <div class="cs-callout">
-                <p>Every chart passes WCAG 1.4.11 non-text contrast, and the colour system works in greyscale — tested by printing the dashboard in black and white. If the meaning survives the print, colour is doing its job as enhancement, not as the sole carrier of information.</p>
+                <p>Every chart passes WCAG 1.4.11 non-text contrast, and the colour system works in greyscale — tested by printing the dashboard in black and white.</p>
               </div>
             </section>
 
@@ -192,7 +193,7 @@
               <p class="cs-section__label">05 — Sustainable UI</p>
               <h2 class="cs-section__heading" id="sustainability-heading">A sustainability product should model what it preaches.</h2>
               <div class="cs-section__body">
-                <p>Given the product's purpose, it felt important to apply green design principles to the interface itself. We minimised JavaScript dependencies for chart rendering, choosing a lightweight library over a feature-heavy one. Dark mode reduced OLED screen energy consumption — and given sustainability managers were often viewing dashboards in board meetings on large screens, it also reduced presentation glare.</p>
+                <p>Given the product's purpose, it felt important to apply green design principles to the interface itself. We minimised JavaScript dependencies for chart rendering, choosing a lightweight library over a feature-heavy one. Dark mode reduced OLED screen energy consumption.</p>
                 <p>We used the Website Carbon Calculator to benchmark the dashboard's own emissions before and after — the redesigned version was 68% lighter than the original.</p>
               </div>
 
@@ -208,12 +209,69 @@
               </div>
             </section>
 
+            <section class="cs-section reveal" id="figma-files" aria-labelledby="figma-heading">
+              <p class="cs-section__label">06 — Figma Files</p>
+              <h2 class="cs-section__heading" id="figma-heading">Design files</h2>
+
+              <div class="cs-figma-files">
+
+                <div class="cs-figma-file">
+                  <div class="cs-figma-file__header">
+                    <svg class="cs-figma-file__icon" width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                      <path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/>
+                      <path d="M9.5 47.5A9.5 9.5 0 0 1 19 38v9.5a9.5 9.5 0 0 1-9.5 9.5z" fill="#0ACF83"/>
+                      <path d="M0 28.5A9.5 9.5 0 0 1 9.5 19H19v9.5A9.5 9.5 0 0 1 9.5 38 9.5 9.5 0 0 1 0 28.5z" fill="#FF7262"/>
+                      <path d="M0 9.5A9.5 9.5 0 0 1 9.5 0H19v19H9.5A9.5 9.5 0 0 1 0 9.5z" fill="#F24E1E"/>
+                      <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
+                    </svg>
+                    <div>
+                      <p class="cs-figma-file__name">Investment Evolution</p>
+                      <a href="https://www.figma.com/design/Ur5UqNdfGPD0rXv11Gc4MR/Investment---evolution?node-id=1-271&t=l48PeOors8O9WQA1-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                    </div>
+                  </div>
+                  <div class="cs-figma-embed">
+                    <iframe
+                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/Ur5UqNdfGPD0rXv11Gc4MR/Investment---evolution?node-id=1-271&t=l48PeOors8O9WQA1-1"
+                      allowfullscreen
+                      loading="lazy"
+                      title="Degroof Petercam Investment Evolution — Figma design file"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="cs-figma-file">
+                  <div class="cs-figma-file__header">
+                    <svg class="cs-figma-file__icon" width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                      <path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/>
+                      <path d="M9.5 47.5A9.5 9.5 0 0 1 19 38v9.5a9.5 9.5 0 0 1-9.5 9.5z" fill="#0ACF83"/>
+                      <path d="M0 28.5A9.5 9.5 0 0 1 9.5 19H19v9.5A9.5 9.5 0 0 1 9.5 38 9.5 9.5 0 0 1 0 28.5z" fill="#FF7262"/>
+                      <path d="M0 9.5A9.5 9.5 0 0 1 9.5 0H19v19H9.5A9.5 9.5 0 0 1 0 9.5z" fill="#F24E1E"/>
+                      <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
+                    </svg>
+                    <div>
+                      <p class="cs-figma-file__name">Design System 1.0</p>
+                      <a href="https://www.figma.com/design/BAguh6VVa8h8h5rDxrqQUL/Design-system-1.0?node-id=0-1&t=UbPZy7MkUebYOFxY-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                    </div>
+                  </div>
+                  <div class="cs-figma-embed">
+                    <iframe
+                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/BAguh6VVa8h8h5rDxrqQUL/Design-system-1.0?node-id=0-1&t=UbPZy7MkUebYOFxY-1"
+                      allowfullscreen
+                      loading="lazy"
+                      title="Degroof Petercam Design System 1.0 — Figma design file"
+                    ></iframe>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
             <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
-              <p class="cs-section__label">06 — Outcomes</p>
+              <p class="cs-section__label">07 — Outcomes</p>
               <h2 class="cs-section__heading" id="outcomes-heading">Clear data. Engaged users. Fewer support calls.</h2>
               <div class="cs-section__body">
                 <p>Three months after launch, weekly active usage of dashboard features had nearly quadrupled. Users were spending more time exploring the "what can we do about it" section — the reduction opportunities — which was the behaviour the product team had always wanted but never achieved.</p>
-                <p>The product was featured in two climate-tech publications as an example of data visualisation done with restraint. The CEO cited the redesign as a significant factor in their next funding round conversations.</p>
+                <p>The product was featured in two climate-tech publications as an example of data visualisation done with restraint.</p>
               </div>
 
               <div class="cs-stats">
@@ -244,7 +302,7 @@
     <div class="container">
       <a href="accessible-onboarding.html" class="cs-project-nav__link">
         <span class="cs-project-nav__dir">Previous Project</span>
-        <span class="cs-project-nav__title">← Accessible Onboarding</span>
+        <span class="cs-project-nav__title">← Go4Jobs</span>
       </a>
       <a href="../index.html#projects" class="cs-project-nav__link cs-project-nav__link--next">
         <span class="cs-project-nav__dir">All Projects</span>

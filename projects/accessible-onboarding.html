@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Accessible Onboarding — Case Study by Erhan Lammar. Redesigning onboarding to meet WCAG AA and improve completion by 23%." />
-  <title>Accessible Onboarding — Erhan Lammar</title>
+  <meta name="description" content="Go4Jobs — Case Study by Erhan Lammar. UI design for the Go4Jobs platform." />
+  <title>Go4Jobs — Erhan Lammar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -48,7 +48,7 @@
           <span class="cs-hero__tag">WCAG 2.1</span>
         </div>
 
-        <h1 class="cs-hero__title" id="cs-title">Accessible Onboarding</h1>
+        <h1 class="cs-hero__title" id="cs-title">Go4Jobs</h1>
         <p class="cs-hero__summary">
           Redesigning a product's onboarding flow to meet WCAG AA — eliminating barriers for users with assistive technology and improving overall task completion by 23%.
         </p>
@@ -59,8 +59,8 @@
             <dd class="cs-meta-item__value">UX Designer · Accessibility Lead</dd>
           </div>
           <div class="cs-meta-item">
-            <dt class="cs-meta-item__label">Year</dt>
-            <dd class="cs-meta-item__value">2023</dd>
+            <dt class="cs-meta-item__label">Client</dt>
+            <dd class="cs-meta-item__value">Go4Jobs</dd>
           </div>
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Team</dt>
@@ -84,6 +84,7 @@
             <a href="#audit" class="cs-sidebar__link">Accessibility Audit</a>
             <a href="#design" class="cs-sidebar__link">Design Decisions</a>
             <a href="#testing" class="cs-sidebar__link">Testing</a>
+            <a href="#figma-files" class="cs-sidebar__link">Figma Files</a>
             <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
           </aside>
 
@@ -164,12 +165,12 @@
                 <p>The progress indicator became a proper <code>progressbar</code> ARIA role with a meaningful label. Every form field got a persistent, visible label above the input. Error messages were rewritten to be specific and actionable, not generic.</p>
               </div>
 
-              <div class="cs-image-block" role="img" aria-label="Redesigned onboarding form placeholder — showing visible label above input, error message linked with aria-describedby, visible focus ring">
+              <div class="cs-image-block" role="img" aria-label="Redesigned onboarding form — showing visible label above input, error message linked with aria-describedby, visible focus ring">
                 Redesigned form with labelling and focus states
               </div>
 
               <div class="cs-callout">
-                <p>A focus ring is not an eyesore — it's the cursor for keyboard users. We designed focus indicators that were visible and on-brand: 2px solid accent green, 3px offset. They made the product look <em>more</em> considered, not less.</p>
+                <p>A focus ring is not an eyesore — it's the cursor for keyboard users. We designed focus indicators that were visible and on-brand: 2px solid accent green, 3px offset.</p>
               </div>
             </section>
 
@@ -182,8 +183,41 @@
               </div>
             </section>
 
+            <section class="cs-section reveal" id="figma-files" aria-labelledby="figma-heading">
+              <p class="cs-section__label">05 — Figma Files</p>
+              <h2 class="cs-section__heading" id="figma-heading">Design files</h2>
+
+              <div class="cs-figma-files">
+
+                <div class="cs-figma-file">
+                  <div class="cs-figma-file__header">
+                    <svg class="cs-figma-file__icon" width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                      <path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/>
+                      <path d="M9.5 47.5A9.5 9.5 0 0 1 19 38v9.5a9.5 9.5 0 0 1-9.5 9.5z" fill="#0ACF83"/>
+                      <path d="M0 28.5A9.5 9.5 0 0 1 9.5 19H19v9.5A9.5 9.5 0 0 1 9.5 38 9.5 9.5 0 0 1 0 28.5z" fill="#FF7262"/>
+                      <path d="M0 9.5A9.5 9.5 0 0 1 9.5 0H19v19H9.5A9.5 9.5 0 0 1 0 9.5z" fill="#F24E1E"/>
+                      <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
+                    </svg>
+                    <div>
+                      <p class="cs-figma-file__name">Go4Jobs — UI Design</p>
+                      <a href="https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                    </div>
+                  </div>
+                  <div class="cs-figma-embed">
+                    <iframe
+                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1"
+                      allowfullscreen
+                      loading="lazy"
+                      title="Go4Jobs — Figma design file"
+                    ></iframe>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
             <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
-              <p class="cs-section__label">05 — Outcomes</p>
+              <p class="cs-section__label">06 — Outcomes</p>
               <h2 class="cs-section__heading" id="outcomes-heading">Better access. Better completion. Better product.</h2>
               <div class="cs-section__body">
                 <p>Post-launch metrics showed a 23% improvement in onboarding completion rate overall — not just for users with assistive technology. Support tickets from users encountering errors in the flow dropped by 61% within the first month. The product passed a third-party WCAG 2.1 AA audit with no critical or serious failures.</p>
@@ -217,11 +251,11 @@
     <div class="container">
       <a href="forma-design-system.html" class="cs-project-nav__link">
         <span class="cs-project-nav__dir">Previous Project</span>
-        <span class="cs-project-nav__title">← Forma Design System</span>
+        <span class="cs-project-nav__title">← Elia Group</span>
       </a>
       <a href="carbon-footprint-dashboard.html" class="cs-project-nav__link cs-project-nav__link--next">
         <span class="cs-project-nav__dir">Next Project</span>
-        <span class="cs-project-nav__title">Carbon Footprint Dashboard →</span>
+        <span class="cs-project-nav__title">Degroof Petercam →</span>
       </a>
     </div>
   </nav>

@@ -413,6 +413,9 @@ ul { list-style: none; }
     gap: var(--space-10);
     align-items: start;
   }
+  .about__facts {
+    padding-top: 68px; /* offset label height (20px) + label margin-bottom (48px) */
+  }
 }
 
 .about__text {

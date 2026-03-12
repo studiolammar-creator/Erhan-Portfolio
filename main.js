@@ -1,0 +1,112 @@
+/**
+ * Erhan Lammar Portfolio — main.js
+ * Minimal vanilla JS: hero animation + scroll reveals + active nav + year
+ */
+
+(function () {
+  'use strict';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Year ── */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── Hero fade-in ── */
+  function initHero() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    if (prefersReducedMotion) {
+      hero.classList.add('hero--loaded');
+      return;
+    }
+
+    // Small rAF delay to ensure paint before animation starts
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        hero.classList.add('hero--loaded');
+      });
+    });
+  }
+
+  /* ── Scroll reveals (IntersectionObserver) ── */
+  function initReveal() {
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('is-visible');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+
+  /* ── Active nav link on scroll ── */
+  function initActiveNav() {
+    const links = document.querySelectorAll('.nav__link');
+    const sections = document.querySelectorAll('main section[id]');
+
+    if (!links.length || !sections.length) return;
+
+    const setActive = (id) => {
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === `#${id}`) {
+          link.classList.add('nav__link--active');
+          link.setAttribute('aria-current', 'true');
+        } else {
+          link.classList.remove('nav__link--active');
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  }
+
+  /* ── Smooth scroll for nav links (keyboard-safe) ── */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'instant' : 'smooth' });
+        // Move focus to target for keyboard / AT users
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      });
+    });
+  }
+
+  /* ── Init ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    initHero();
+    initReveal();
+    initActiveNav();
+    initSmoothScroll();
+  });
+
+})();

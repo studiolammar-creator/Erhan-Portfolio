@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carbon Footprint Dashboard — Case Study by Erhan Lammar. Designing a sustainability metrics UI for a green-tech startup." />
+  <title>Carbon Footprint Dashboard — Erhan Lammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html" class="nav__logo" aria-label="Erhan Lammar — Home">
+        <span aria-hidden="true">EL</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+        <li><a href="../index.html#systems" class="nav__link">Systems</a></li>
+        <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="container reveal">
+
+        <div class="cs-hero__back">
+          <a href="../index.html#projects" class="back-link" aria-label="Back to all projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            All Projects
+          </a>
+        </div>
+
+        <div class="cs-hero__tags">
+          <span class="cs-hero__tag">Sustainability</span>
+          <span class="cs-hero__tag">Data Visualisation</span>
+          <span class="cs-hero__tag">UI Design</span>
+        </div>
+
+        <h1 class="cs-hero__title" id="cs-title">Carbon Footprint Dashboard</h1>
+        <p class="cs-hero__summary">
+          Turning dense carbon emissions data into clear, actionable insight — a sustainability metrics UI designed for non-technical users at a green-tech startup.
+        </p>
+
+        <dl class="cs-hero__meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Role</dt>
+            <dd class="cs-meta-item__value">Lead UI Designer</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Year</dt>
+            <dd class="cs-meta-item__value">2024</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Team</dt>
+            <dd class="cs-meta-item__value">1 designer · 2 engineers · 1 data analyst</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Tools</dt>
+            <dd class="cs-meta-item__value">Figma · Recharts · Observable</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <div class="cs-body">
+      <div class="container">
+        <div class="cs-body__grid">
+
+          <aside class="cs-sidebar" aria-label="Case study sections">
+            <a href="#problem" class="cs-sidebar__link">Problem</a>
+            <a href="#users" class="cs-sidebar__link">Users</a>
+            <a href="#information-architecture" class="cs-sidebar__link">IA & Hierarchy</a>
+            <a href="#charts" class="cs-sidebar__link">Chart Design</a>
+            <a href="#sustainability" class="cs-sidebar__link">Sustainable UI</a>
+            <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
+          </aside>
+
+          <div class="cs-content">
+
+            <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
+              <p class="cs-section__label">01 — Problem</p>
+              <h2 class="cs-section__heading" id="problem-heading">Data that only data scientists could read.</h2>
+              <div class="cs-section__body">
+                <p>The startup had built a powerful carbon accounting engine — it could ingest emissions data across Scope 1, 2, and 3, model reduction scenarios, and benchmark against industry standards. But the interface had been designed by engineers for engineers. When they started selling to sustainability managers and finance teams, the product fell flat.</p>
+                <p>The dashboard showed everything at once: thirty-seven data points on a single screen, six different chart types, and a colour system that conveyed no consistent meaning. Users told researchers they "didn't know where to look first" and "weren't sure what they were supposed to do with the information."</p>
+              </div>
+
+              <div class="cs-callout">
+                <p>"We know the data is right. The problem is our users open the dashboard and immediately feel overwhelmed. They close it and email us instead." — Product Manager</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">37</p>
+                  <p class="cs-stat__label">Data points shown simultaneously on landing</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">6</p>
+                  <p class="cs-stat__label">Inconsistent chart types in original design</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">22%</p>
+                  <p class="cs-stat__label">Weekly active users on dashboard features</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="users" aria-labelledby="users-heading">
+              <p class="cs-section__label">02 — Users</p>
+              <h2 class="cs-section__heading" id="users-heading">Two jobs. Very different mental models.</h2>
+              <div class="cs-section__body">
+                <p>Research surfaced two distinct user types with different goals. Sustainability Managers wanted to understand their current position, identify their biggest opportunities, and communicate progress to the board. They needed clear narrative — a story the data was telling. Finance Directors wanted to verify numbers, track trends over time, and understand liability. They needed specificity and audit trails.</p>
+                <p>The original dashboard served neither. We designed for both — starting with the sustainability manager as the primary user, with progressive disclosure paths into the detail that finance users needed.</p>
+              </div>
+
+              <div class="cs-image-block" role="img" aria-label="User persona cards placeholder — Sustainability Manager vs Finance Director, showing different goals and mental models">
+                User personas — primary and secondary
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="information-architecture" aria-labelledby="ia-heading">
+              <p class="cs-section__label">03 — IA & Hierarchy</p>
+              <h2 class="cs-section__heading" id="ia-heading">One number to rule them all.</h2>
+              <div class="cs-section__body">
+                <p>The most important design decision was reducing the entry point to a single headline metric: total emissions this period, with a clear indicator of whether this is better or worse than last period. Everything else is secondary.</p>
+                <p>We structured the information architecture around three questions users actually asked: "How are we doing overall?" → "Where are our biggest emissions?" → "What can we do about it?". Each question had a corresponding section, and navigation flowed in that order.</p>
+              </div>
+
+              <div class="cs-steps">
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">1</span>
+                  <div class="cs-step__content">
+                    <h4>Overview strip</h4>
+                    <p>Total emissions, period-over-period change, and target tracking. Three numbers. Clear status. Immediately scannable.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">2</span>
+                  <div class="cs-step__content">
+                    <h4>Breakdown by scope</h4>
+                    <p>Scope 1, 2, and 3 visualised comparatively — not as separate charts but as a single proportional view that shows where the weight sits.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">3</span>
+                  <div class="cs-step__content">
+                    <h4>Top emission sources</h4>
+                    <p>Ranked list of the five largest contributing categories — with reduction potential clearly indicated alongside each.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">4</span>
+                  <div class="cs-step__content">
+                    <h4>Trend & forecast</h4>
+                    <p>Historical trend with projected trajectory at current pace — and a "what if" layer for modelling reduction scenarios.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="charts" aria-labelledby="charts-heading">
+              <p class="cs-section__label">04 — Chart Design</p>
+              <h2 class="cs-section__heading" id="charts-heading">Less chart types. More clarity.</h2>
+              <div class="cs-section__body">
+                <p>We reduced from six chart types to three: a stacked area chart for trends over time, a horizontal bar chart for comparisons, and a simple progress arc for target tracking. Each was chosen because it matched the cognitive task — not because the library offered it.</p>
+                <p>Colour was given systematic meaning: green for on-track or improved, amber for at-risk, and a neutral palette for everything else. Red was reserved only for "exceeded limit" states. Colour was never the only signal — every status had a text label and an icon.</p>
+              </div>
+
+              <div class="cs-image-block" role="img" aria-label="Dashboard chart designs placeholder — stacked area chart showing scope emissions over time with consistent colour system">
+                Dashboard chart system
+              </div>
+
+              <div class="cs-callout">
+                <p>Every chart passes WCAG 1.4.11 non-text contrast, and the colour system works in greyscale — tested by printing the dashboard in black and white. If the meaning survives the print, colour is doing its job as enhancement, not as the sole carrier of information.</p>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="sustainability" aria-labelledby="sustainability-heading">
+              <p class="cs-section__label">05 — Sustainable UI</p>
+              <h2 class="cs-section__heading" id="sustainability-heading">A sustainability product should model what it preaches.</h2>
+              <div class="cs-section__body">
+                <p>Given the product's purpose, it felt important to apply green design principles to the interface itself. We minimised JavaScript dependencies for chart rendering, choosing a lightweight library over a feature-heavy one. Dark mode reduced OLED screen energy consumption — and given sustainability managers were often viewing dashboards in board meetings on large screens, it also reduced presentation glare.</p>
+                <p>We used the Website Carbon Calculator to benchmark the dashboard's own emissions before and after — the redesigned version was 68% lighter than the original.</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">68%</p>
+                  <p class="cs-stat__label">Lighter page weight vs. original dashboard</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">3</p>
+                  <p class="cs-stat__label">Chart types (down from 6) — less JS, same insight</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
+              <p class="cs-section__label">06 — Outcomes</p>
+              <h2 class="cs-section__heading" id="outcomes-heading">Clear data. Engaged users. Fewer support calls.</h2>
+              <div class="cs-section__body">
+                <p>Three months after launch, weekly active usage of dashboard features had nearly quadrupled. Users were spending more time exploring the "what can we do about it" section — the reduction opportunities — which was the behaviour the product team had always wanted but never achieved.</p>
+                <p>The product was featured in two climate-tech publications as an example of data visualisation done with restraint. The CEO cited the redesign as a significant factor in their next funding round conversations.</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">81%</p>
+                  <p class="cs-stat__label">Weekly active users on dashboard features</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">−74%</p>
+                  <p class="cs-stat__label">Support tickets asking "what does this mean?"</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">4.6/5</p>
+                  <p class="cs-stat__label">User satisfaction score in post-launch survey</p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <nav class="cs-project-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="accessible-onboarding.html" class="cs-project-nav__link">
+        <span class="cs-project-nav__dir">Previous Project</span>
+        <span class="cs-project-nav__title">← Accessible Onboarding</span>
+      </a>
+      <a href="../index.html#projects" class="cs-project-nav__link cs-project-nav__link--next">
+        <span class="cs-project-nav__dir">All Projects</span>
+        <span class="cs-project-nav__title">Back to Portfolio →</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="site-footer__copy">&copy; <span class="year"></span> Erhan Lammar</p>
+      <p class="site-footer__note">Built with intentionality and low emissions in mind.</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    const sidebarLinks = document.querySelectorAll('.cs-sidebar__link');
+    const csSections = document.querySelectorAll('.cs-section[id]');
+    const sidebarObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(l => l.classList.remove('is-active'));
+          const active = document.querySelector(`.cs-sidebar__link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.4 });
+    csSections.forEach(s => sidebarObserver.observe(s));
+  </script>
+</body>
+</html>

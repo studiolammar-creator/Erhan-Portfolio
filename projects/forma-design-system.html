@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forma Design System — Case Study by Erhan Lammar. A multi-brand, token-based design system serving 6+ product teams." />
+  <title>Forma Design System — Erhan Lammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html" class="nav__logo" aria-label="Erhan Lammar — Home">
+        <span aria-hidden="true">EL</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+        <li><a href="../index.html#systems" class="nav__link">Systems</a></li>
+        <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="container reveal">
+
+        <div class="cs-hero__back">
+          <a href="../index.html#projects" class="back-link" aria-label="Back to all projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            All Projects
+          </a>
+        </div>
+
+        <div class="cs-hero__tags">
+          <span class="cs-hero__tag">Design System</span>
+          <span class="cs-hero__tag">Token Design</span>
+          <span class="cs-hero__tag">Component Architecture</span>
+        </div>
+
+        <h1 class="cs-hero__title" id="cs-title">Forma Design System</h1>
+        <p class="cs-hero__summary">
+          Building a shared foundation for 6+ product teams — a multi-brand, token-based design system that unified voice, motion, and component patterns across platforms.
+        </p>
+
+        <dl class="cs-hero__meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Role</dt>
+            <dd class="cs-meta-item__value">Lead Design Systems Designer</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Year</dt>
+            <dd class="cs-meta-item__value">2023 – 2024</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Team</dt>
+            <dd class="cs-meta-item__value">3 designers · 4 engineers</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Tools</dt>
+            <dd class="cs-meta-item__value">Figma · Storybook · Zeroheight</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- Case Study Body -->
+    <div class="cs-body">
+      <div class="container">
+        <div class="cs-body__grid">
+
+          <!-- Sidebar nav -->
+          <aside class="cs-sidebar" aria-label="Case study sections">
+            <a href="#problem" class="cs-sidebar__link">Problem</a>
+            <a href="#approach" class="cs-sidebar__link">Approach</a>
+            <a href="#token-architecture" class="cs-sidebar__link">Token Architecture</a>
+            <a href="#components" class="cs-sidebar__link">Components</a>
+            <a href="#documentation" class="cs-sidebar__link">Documentation</a>
+            <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
+          </aside>
+
+          <!-- Content -->
+          <div class="cs-content">
+
+            <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
+              <p class="cs-section__label">01 — Problem</p>
+              <h2 class="cs-section__heading" id="problem-heading">Six teams. Six interpretations of the same button.</h2>
+              <div class="cs-section__body">
+                <p>Before Forma, each product team had evolved its own component library. What started as pragmatic independence had accumulated into a significant consistency debt — buttons with slightly different border-radii, colour tokens that diverged across brands, and a motion language nobody had formally defined.</p>
+                <p>Every design handoff involved re-explaining decisions. Engineers rebuilt components that already existed elsewhere. Accessibility annotations were inconsistent or missing entirely. New brand themes required weeks of manual reskinning.</p>
+              </div>
+
+              <div class="cs-callout">
+                <p>"We had the same component built four different ways in four different repositories. Nobody owned it, so nobody maintained it properly." — Engineering lead</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">6+</p>
+                  <p class="cs-stat__label">Product teams sharing no common foundation</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">40%</p>
+                  <p class="cs-stat__label">Of design work was duplication of existing work</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">3×</p>
+                  <p class="cs-stat__label">Longer design–dev handoffs vs. industry baseline</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="approach" aria-labelledby="approach-heading">
+              <p class="cs-section__label">02 — Approach</p>
+              <h2 class="cs-section__heading" id="approach-heading">Start with tokens. Let components follow.</h2>
+              <div class="cs-section__body">
+                <p>Rather than jumping straight to a component library, we started with a token audit. We mapped every colour, spacing, radius, shadow, and typographic decision in use across all six products. Patterns emerged quickly — and so did the conflicts.</p>
+                <p>The token architecture came first because without a stable foundation, any component built would inevitably fracture under a new brand theme or dark mode requirement.</p>
+              </div>
+
+              <div class="cs-steps">
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">1</span>
+                  <div class="cs-step__content">
+                    <h4>Audit & inventory</h4>
+                    <p>Catalogued every design decision across 6 products — identifying the duplication and the genuine variation that needed to be preserved.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">2</span>
+                  <div class="cs-step__content">
+                    <h4>Token architecture</h4>
+                    <p>Defined a three-tier token model: primitives → semantics → component-level. Every team could theme at the semantic level without touching components.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">3</span>
+                  <div class="cs-step__content">
+                    <h4>Component library</h4>
+                    <p>Built from the ground up with accessibility as a constraint, not a checklist — keyboard navigation, ARIA roles, and focus management baked in from the start.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">4</span>
+                  <div class="cs-step__content">
+                    <h4>Documentation & adoption</h4>
+                    <p>Published to Zeroheight with decision rationale, accessibility guidance, and live Storybook embeds. Ran onboarding sessions with each team.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="token-architecture" aria-labelledby="token-heading">
+              <p class="cs-section__label">03 — Token Architecture</p>
+              <h2 class="cs-section__heading" id="token-heading">Three tiers. One source of truth.</h2>
+              <div class="cs-section__body">
+                <p>The Forma token model has three distinct layers. Primitive tokens hold raw values — a specific hex colour or a pixel measurement with no semantic meaning attached. Semantic tokens reference primitives and carry intent: <code>color.interactive.default</code> tells you what the value <em>means</em>, not what it <em>is</em>. Component tokens map semantic tokens to specific component contexts.</p>
+                <p>This separation meant that switching from Brand A to Brand B required only updating which primitive each semantic token pointed to. Components never needed to change.</p>
+              </div>
+
+              <div class="cs-image-block" role="img" aria-label="Token architecture diagram placeholder — three-tier model showing primitives, semantics, and component tokens">
+                Token architecture diagram
+              </div>
+
+              <div class="cs-callout">
+                <p>Naming convention: <strong>[category].[variant].[state]</strong> — e.g. <code>color.interactive.hover</code>, <code>space.component.padding-sm</code>. Predictable, readable, grep-able.</p>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="components" aria-labelledby="components-heading">
+              <p class="cs-section__label">04 — Components</p>
+              <h2 class="cs-section__heading" id="components-heading">Built once. Accessible by default.</h2>
+              <div class="cs-section__body">
+                <p>Every component was built with a strict accessibility contract: keyboard interaction model documented before code was written, ARIA patterns reviewed against WCAG 2.1, and focus management tested with VoiceOver and NVDA. Components that failed any accessibility criterion were not shipped.</p>
+                <p>The Figma component library mirrored the code — every prop in code had a corresponding variant in Figma. Annotations directly on components described the accessibility intent so designers could hand off confidently.</p>
+              </div>
+
+              <div class="cs-image-block" role="img" aria-label="Component library overview placeholder — showing button, input, card, and navigation components">
+                Component library overview
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="documentation" aria-labelledby="docs-heading">
+              <p class="cs-section__label">05 — Documentation</p>
+              <h2 class="cs-section__heading" id="docs-heading">Documentation that answers the next question.</h2>
+              <div class="cs-section__body">
+                <p>Most design system documentation answers "how do I use this?". Forma's documentation also answers "why does it work this way?" and "what should I do when this component isn't quite right for my use case?".</p>
+                <p>Every component page includes: usage guidance, accessibility notes, keyboard interaction table, do/don't examples, and a link to the Storybook story. The documentation became the primary onboarding surface for new designers and engineers joining the organisation.</p>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
+              <p class="cs-section__label">06 — Outcomes</p>
+              <h2 class="cs-section__heading" id="outcomes-heading">A shared language changes how teams work.</h2>
+              <div class="cs-section__body">
+                <p>Eighteen months after launch, Forma is used across all six product teams with no parallel component libraries remaining. Design handoff time dropped significantly as engineers had a stable, documented reference. New brand themes that previously took weeks to implement could be delivered in days by updating semantic token mappings.</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">6/6</p>
+                  <p class="cs-stat__label">Teams fully migrated to Forma</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">60%</p>
+                  <p class="cs-stat__label">Reduction in design–dev handoff time</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">WCAG AA</p>
+                  <p class="cs-stat__label">All 47 components pass accessibility audit</p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Project Navigation -->
+  <nav class="cs-project-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link" aria-label="Back to all projects">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Projects
+      </a>
+      <a href="accessible-onboarding.html" class="cs-project-nav__link cs-project-nav__link--next">
+        <span class="cs-project-nav__dir">Next Project</span>
+        <span class="cs-project-nav__title">Accessible Onboarding →</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="site-footer__copy">&copy; <span class="year"></span> Erhan Lammar</p>
+      <p class="site-footer__note">Built with intentionality and low emissions in mind.</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // Fill year
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+
+    // Sidebar active state on scroll
+    const sidebarLinks = document.querySelectorAll('.cs-sidebar__link');
+    const csSections = document.querySelectorAll('.cs-section[id]');
+    const sidebarObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(l => l.classList.remove('is-active'));
+          const active = document.querySelector(`.cs-sidebar__link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.4 });
+    csSections.forEach(s => sidebarObserver.observe(s));
+  </script>
+</body>
+</html>

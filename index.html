@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Erhan Lammar — UI Designer and Design System contributor specialising in accessibility and sustainable digital design." />
+  <title>Erhan Lammar — UI Designer & Design Systems</title>
+
+  <!-- Preconnect for font performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#" class="nav__logo" aria-label="Erhan Lammar — Home">
+        <span aria-hidden="true">EL</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#systems" class="nav__link">Systems</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__inner">
+        <p class="hero__name" data-delay="0">Erhan Lammar</p>
+        <h1 class="hero__heading" id="hero-heading">
+          <span class="hero__line hero__line--serif" data-delay="1">UI Designer.</span>
+          <span class="hero__line hero__line--serif" data-delay="2">Design Systems</span>
+          <span class="hero__line hero__line--serif hero__line--accent" data-delay="3">&amp; Accessibility.</span>
+        </h1>
+        <p class="hero__sub" data-delay="4">
+          I design with clarity, build for everyone, and care about the footprint we leave behind.
+        </p>
+      </div>
+      <div class="hero__scroll-cue" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container reveal">
+        <div class="about__grid">
+          <div class="about__statement">
+            <h2 class="section-label" id="about-heading">About</h2>
+            <p class="about__text">
+              I'm a UI Designer who builds at the intersection of craft, systems, and responsibility.
+              My work lives in design systems — the tokens, components, and documentation that power
+              products used by real people. I care deeply about accessibility not as a compliance
+              checkbox but as a design principle, and I believe every decision we make — from contrast
+              ratios to payload size — has a footprint.
+            </p>
+          </div>
+          <div class="about__facts">
+            <ul class="facts-list" role="list">
+              <li class="facts-list__item">
+                <span class="facts-list__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  </svg>
+                </span>
+                <span>Based remotely — open to global teams</span>
+              </li>
+              <li class="facts-list__item">
+                <span class="facts-list__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M8 4.5v3.75l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>Available for new work</span>
+              </li>
+              <li class="facts-list__item">
+                <span class="facts-list__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M1.5 6.5h13" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <span>Focus: Design systems &amp; accessibility</span>
+              </li>
+              <li class="facts-list__item">
+                <span class="facts-list__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1.5L10 5.5H14L11 8.5L12.5 12.5L8 10L3.5 12.5L5 8.5L2 5.5H6L8 1.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>WCAG 2.1/2.2 practitioner</span>
+              </li>
+              <li class="facts-list__item">
+                <span class="facts-list__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 13s0-3 2-4.5 5-1 6-3-1-4-4-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="8" cy="3.5" r="1" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span>Sustainable &amp; performance-first design</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container reveal">
+        <h2 class="section-label" id="skills-heading">Skills &amp; Expertise</h2>
+        <div class="skills__grid">
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">Design</h3>
+            <ul class="tag-list" role="list">
+              <li class="tag">UI Design</li>
+              <li class="tag">Design Systems</li>
+              <li class="tag">Component Architecture</li>
+              <li class="tag">Token Design</li>
+              <li class="tag">Figma</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">Accessibility</h3>
+            <ul class="tag-list" role="list">
+              <li class="tag">WCAG 2.1 / 2.2</li>
+              <li class="tag">Screen Reader Testing</li>
+              <li class="tag">Keyboard Navigation</li>
+              <li class="tag">ARIA</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">Sustainability</h3>
+            <ul class="tag-list" role="list">
+              <li class="tag">Carbon-Aware Design</li>
+              <li class="tag">Green UX</li>
+              <li class="tag">Performance-First Design</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">Tools</h3>
+            <ul class="tag-list" role="list">
+              <li class="tag">Figma</li>
+              <li class="tag">Storybook</li>
+              <li class="tag">Zeroheight</li>
+              <li class="tag">VS Code</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container reveal">
+        <h2 class="section-label" id="projects-heading">Selected Projects</h2>
+        <div class="projects__grid">
+
+          <article class="project-card" aria-labelledby="project-1-title">
+            <div class="project-card__inner">
+              <div class="project-card__tags" aria-label="Tags">
+                <span class="project-tag">Design System</span>
+                <span class="project-tag">Token Design</span>
+              </div>
+              <h3 class="project-card__title" id="project-1-title">Forma Design System</h3>
+              <p class="project-card__desc">
+                Built and maintained a multi-brand token-based system for 6+ product teams — unifying voice, motion, and component patterns across platforms.
+              </p>
+              <a href="projects/forma-design-system.html" class="project-card__link" aria-label="View Forma Design System case study">
+                View Case Study
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="project-2-title">
+            <div class="project-card__inner">
+              <div class="project-card__tags" aria-label="Tags">
+                <span class="project-tag">Accessibility</span>
+                <span class="project-tag">UX Design</span>
+              </div>
+              <h3 class="project-card__title" id="project-2-title">Accessible Onboarding</h3>
+              <p class="project-card__desc">
+                Redesigned a product onboarding flow to meet WCAG AA, improving task completion by 23% and reducing support tickets from users with assistive tech.
+              </p>
+              <a href="projects/accessible-onboarding.html" class="project-card__link" aria-label="View Accessible Onboarding case study">
+                View Case Study
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="project-3-title">
+            <div class="project-card__inner">
+              <div class="project-card__tags" aria-label="Tags">
+                <span class="project-tag">Sustainability</span>
+                <span class="project-tag">Data Viz</span>
+              </div>
+              <h3 class="project-card__title" id="project-3-title">Carbon Footprint Dashboard</h3>
+              <p class="project-card__desc">
+                Designed a sustainability metrics UI for a green-tech startup — turning dense carbon data into clear, actionable insight for non-technical users.
+              </p>
+              <a href="projects/carbon-footprint-dashboard.html" class="project-card__link" aria-label="View Carbon Footprint Dashboard case study">
+                View Case Study
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Design System Contributions -->
+    <section class="section ds-contributions" id="systems" aria-labelledby="systems-heading">
+      <div class="container reveal">
+        <h2 class="section-label" id="systems-heading">Design System Contributions</h2>
+        <p class="ds-contributions__intro">
+          I believe great products are built on shared foundations.
+        </p>
+        <div class="ds-contributions__grid">
+
+          <div class="contribution-card">
+            <div class="contribution-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="20" r="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="4" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="20" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 6v3M12 15v3M6 12h3M15 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="contribution-card__title">Token Architecture &amp; Naming</h3>
+            <p class="contribution-card__desc">
+              Establishing semantic token layers — primitives, semantics, components — that scale across brands, themes, and platforms without breaking intent.
+            </p>
+          </div>
+
+          <div class="contribution-card">
+            <div class="contribution-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 8h10M7 12h7M7 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="contribution-card__title">Component Docs &amp; Accessibility Annotations</h3>
+            <p class="contribution-card__desc">
+              Writing component documentation that captures not just how to use a component, but why — including ARIA patterns, keyboard behaviour, and failure modes.
+            </p>
+          </div>
+
+          <div class="contribution-card">
+            <div class="contribution-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M8 6H5a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="8" y="3" width="8" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9 13l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="contribution-card__title">Design–Dev Handoff &amp; Storybook Integration</h3>
+            <p class="contribution-card__desc">
+              Bridging the gap between design intent and implementation — connecting Figma tokens directly to Storybook stories so teams ship what was actually designed.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Strip -->
+    <section class="philosophy-strip" aria-labelledby="philosophy-heading">
+      <div class="container reveal">
+        <h2 class="sr-only" id="philosophy-heading">Design philosophy</h2>
+        <div class="philosophy-strip__grid">
+
+          <div class="philosophy-item">
+            <p class="philosophy-item__text">
+              <strong>Accessible by default.</strong><br />Not retrofitted.
+            </p>
+          </div>
+
+          <div class="philosophy-item">
+            <p class="philosophy-item__text">
+              <strong>Systems over screens.</strong><br />Design once, use everywhere.
+            </p>
+          </div>
+
+          <div class="philosophy-item">
+            <p class="philosophy-item__text">
+              <strong>Lighter footprint.</strong><br />Every byte and contrast choice matters.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container reveal">
+        <h2 class="contact__heading" id="contact-heading">Let's work together.</h2>
+        <p class="contact__sub">
+          I'm currently available for new projects — design systems, accessibility audits, or UI work
+          where craft and clarity matter.
+        </p>
+        <div class="contact__actions">
+          <a
+            href="mailto:erhan@example.com"
+            class="contact__email"
+            aria-label="Send Erhan an email"
+          >
+            erhan@example.com
+          </a>
+          <a
+            href="https://linkedin.com/in/erhanlammar"
+            class="contact__social"
+            aria-label="View Erhan's LinkedIn profile (opens in new tab)"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="site-footer__copy">
+        &copy; <span id="year"></span> Erhan Lammar
+      </p>
+      <p class="site-footer__note">
+        Built with intentionality and low emissions in mind.
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

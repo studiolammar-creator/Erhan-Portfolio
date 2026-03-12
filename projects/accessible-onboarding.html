@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessible Onboarding — Case Study by Erhan Lammar. Redesigning onboarding to meet WCAG AA and improve completion by 23%." />
+  <title>Accessible Onboarding — Erhan Lammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html" class="nav__logo" aria-label="Erhan Lammar — Home">
+        <span aria-hidden="true">EL</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+        <li><a href="../index.html#systems" class="nav__link">Systems</a></li>
+        <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="container reveal">
+
+        <div class="cs-hero__back">
+          <a href="../index.html#projects" class="back-link" aria-label="Back to all projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            All Projects
+          </a>
+        </div>
+
+        <div class="cs-hero__tags">
+          <span class="cs-hero__tag">Accessibility</span>
+          <span class="cs-hero__tag">UX Design</span>
+          <span class="cs-hero__tag">WCAG 2.1</span>
+        </div>
+
+        <h1 class="cs-hero__title" id="cs-title">Accessible Onboarding</h1>
+        <p class="cs-hero__summary">
+          Redesigning a product's onboarding flow to meet WCAG AA — eliminating barriers for users with assistive technology and improving overall task completion by 23%.
+        </p>
+
+        <dl class="cs-hero__meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Role</dt>
+            <dd class="cs-meta-item__value">UX Designer · Accessibility Lead</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Year</dt>
+            <dd class="cs-meta-item__value">2023</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Team</dt>
+            <dd class="cs-meta-item__value">2 designers · 3 engineers · 1 QA</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Tools</dt>
+            <dd class="cs-meta-item__value">Figma · VoiceOver · NVDA · axe DevTools</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <div class="cs-body">
+      <div class="container">
+        <div class="cs-body__grid">
+
+          <aside class="cs-sidebar" aria-label="Case study sections">
+            <a href="#problem" class="cs-sidebar__link">Problem</a>
+            <a href="#audit" class="cs-sidebar__link">Accessibility Audit</a>
+            <a href="#design" class="cs-sidebar__link">Design Decisions</a>
+            <a href="#testing" class="cs-sidebar__link">Testing</a>
+            <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
+          </aside>
+
+          <div class="cs-content">
+
+            <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
+              <p class="cs-section__label">01 — Problem</p>
+              <h2 class="cs-section__heading" id="problem-heading">A 40% drop-off nobody had investigated.</h2>
+              <div class="cs-section__body">
+                <p>The existing onboarding flow had a persistent 40% drop-off on the third step. Analytics showed the problem clearly; they didn't show <em>why</em>. When we reviewed support tickets, a pattern emerged — a significant proportion came from users with assistive technology who couldn't complete the flow at all.</p>
+                <p>The form had no visible focus states. Error messages weren't linked to their inputs. The multi-step progress indicator was decoration, not information. Keyboard users could tab into a modal but couldn't escape it without a mouse.</p>
+              </div>
+
+              <div class="cs-callout">
+                <p>"I've tried three times. The form submits but nothing happens and there's no feedback from my screen reader." — User feedback ticket</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">40%</p>
+                  <p class="cs-stat__label">Drop-off on step 3 before redesign</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">0</p>
+                  <p class="cs-stat__label">WCAG AA criteria met in original flow</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">18</p>
+                  <p class="cs-stat__label">Distinct accessibility failures found in audit</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="audit" aria-labelledby="audit-heading">
+              <p class="cs-section__label">02 — Accessibility Audit</p>
+              <h2 class="cs-section__heading" id="audit-heading">Eighteen failures. None of them surprising.</h2>
+              <div class="cs-section__body">
+                <p>We ran a structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs with VoiceOver (macOS/iOS) and NVDA (Windows). The failures clustered into four clear categories.</p>
+              </div>
+
+              <div class="cs-steps">
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">A</span>
+                  <div class="cs-step__content">
+                    <h4>Focus management</h4>
+                    <p>No visible focus indicators anywhere in the flow. Focus didn't move to the modal on open, and the Escape key didn't close it. Tab order didn't follow visual reading order.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">B</span>
+                  <div class="cs-step__content">
+                    <h4>Form labelling</h4>
+                    <p>Several inputs had placeholder text as the only label — which disappears on interaction. Error messages were positioned visually near inputs but not programmatically associated via <code>aria-describedby</code>.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">C</span>
+                  <div class="cs-step__content">
+                    <h4>Colour contrast</h4>
+                    <p>The secondary button text failed 4.5:1 contrast ratio against its background. Helper text at 12px failed large-text thresholds. Status indicators used colour alone to convey meaning.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">D</span>
+                  <div class="cs-step__content">
+                    <h4>Status &amp; feedback</h4>
+                    <p>The progress indicator had no programmatic role or label. Success and error states changed visually but were never announced to screen readers via live regions.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="design" aria-labelledby="design-heading">
+              <p class="cs-section__label">03 — Design Decisions</p>
+              <h2 class="cs-section__heading" id="design-heading">Fix the foundation. Improve the whole.</h2>
+              <div class="cs-section__body">
+                <p>Accessibility fixes rarely stay isolated — when you fix a focus state, you're also improving clarity for all users. When you add a visible error message linked to its input, you reduce confusion for everyone. The redesign addressed every audit failure, but also used those fixes as an opportunity to improve the overall UX clarity of the flow.</p>
+                <p>The progress indicator became a proper <code>progressbar</code> ARIA role with a meaningful label. Every form field got a persistent, visible label above the input. Error messages were rewritten to be specific and actionable, not generic.</p>
+              </div>
+
+              <div class="cs-image-block" role="img" aria-label="Redesigned onboarding form placeholder — showing visible label above input, error message linked with aria-describedby, visible focus ring">
+                Redesigned form with labelling and focus states
+              </div>
+
+              <div class="cs-callout">
+                <p>A focus ring is not an eyesore — it's the cursor for keyboard users. We designed focus indicators that were visible and on-brand: 2px solid accent green, 3px offset. They made the product look <em>more</em> considered, not less.</p>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="testing" aria-labelledby="testing-heading">
+              <p class="cs-section__label">04 — Testing</p>
+              <h2 class="cs-section__heading" id="testing-heading">Test with real users. Not just automated tools.</h2>
+              <div class="cs-section__body">
+                <p>Automated tools catch roughly 30–40% of accessibility issues. The rest require manual testing and, ideally, testing with people who rely on assistive technology daily. We recruited five participants who used screen readers as their primary means of browsing, and conducted moderated usability sessions with the prototype.</p>
+                <p>Three sessions surfaced issues the automated audit had missed entirely — a custom dropdown that announced incorrectly, a date picker that trapped keyboard focus, and a success animation that caused a WCAG 2.3.3 motion violation.</p>
+              </div>
+            </section>
+
+            <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
+              <p class="cs-section__label">05 — Outcomes</p>
+              <h2 class="cs-section__heading" id="outcomes-heading">Better access. Better completion. Better product.</h2>
+              <div class="cs-section__body">
+                <p>Post-launch metrics showed a 23% improvement in onboarding completion rate overall — not just for users with assistive technology. Support tickets from users encountering errors in the flow dropped by 61% within the first month. The product passed a third-party WCAG 2.1 AA audit with no critical or serious failures.</p>
+              </div>
+
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">+23%</p>
+                  <p class="cs-stat__label">Onboarding completion rate improvement</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">−61%</p>
+                  <p class="cs-stat__label">Support tickets related to onboarding errors</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">AA</p>
+                  <p class="cs-stat__label">WCAG 2.1 — passed third-party audit</p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <nav class="cs-project-nav" aria-label="Project navigation">
+    <div class="container">
+      <a href="forma-design-system.html" class="cs-project-nav__link">
+        <span class="cs-project-nav__dir">Previous Project</span>
+        <span class="cs-project-nav__title">← Forma Design System</span>
+      </a>
+      <a href="carbon-footprint-dashboard.html" class="cs-project-nav__link cs-project-nav__link--next">
+        <span class="cs-project-nav__dir">Next Project</span>
+        <span class="cs-project-nav__title">Carbon Footprint Dashboard →</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="site-footer__copy">&copy; <span class="year"></span> Erhan Lammar</p>
+      <p class="site-footer__note">Built with intentionality and low emissions in mind.</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    const sidebarLinks = document.querySelectorAll('.cs-sidebar__link');
+    const csSections = document.querySelectorAll('.cs-section[id]');
+    const sidebarObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(l => l.classList.remove('is-active'));
+          const active = document.querySelector(`.cs-sidebar__link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.4 });
+    csSections.forEach(s => sidebarObserver.observe(s));
+  </script>
+</body>
+</html>

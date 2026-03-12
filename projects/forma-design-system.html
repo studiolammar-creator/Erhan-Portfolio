@@ -30,7 +30,6 @@
 
   <main id="main-content">
 
-    <!-- Case Study Hero -->
     <section class="cs-hero" aria-labelledby="cs-title">
       <div class="container reveal">
 
@@ -76,31 +75,25 @@
       </div>
     </section>
 
-    <!-- Case Study Body -->
     <div class="cs-body">
       <div class="container">
         <div class="cs-body__grid">
 
-          <!-- Sidebar nav -->
           <aside class="cs-sidebar" aria-label="Case study sections">
             <a href="#problem" class="cs-sidebar__link">Problem</a>
             <a href="#approach" class="cs-sidebar__link">Approach</a>
-            <a href="#token-architecture" class="cs-sidebar__link">Token Architecture</a>
-            <a href="#components" class="cs-sidebar__link">Components</a>
-            <a href="#documentation" class="cs-sidebar__link">Documentation</a>
             <a href="#figma-files" class="cs-sidebar__link">Figma Files</a>
             <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
           </aside>
 
-          <!-- Content -->
           <div class="cs-content">
 
             <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
               <p class="cs-section__label">01 — Problem</p>
               <h2 class="cs-section__heading" id="problem-heading">Six teams. Six interpretations of the same button.</h2>
               <div class="cs-section__body">
-                <p>Before Forma, each product team had evolved its own component library. What started as pragmatic independence had accumulated into a significant consistency debt — buttons with slightly different border-radii, colour tokens that diverged across brands, and a motion language nobody had formally defined.</p>
-                <p>Every design handoff involved re-explaining decisions. Engineers rebuilt components that already existed elsewhere. Accessibility annotations were inconsistent or missing entirely. New brand themes required weeks of manual reskinning.</p>
+                <p>Each product team had evolved its own component library. What started as pragmatic independence had accumulated into a significant consistency debt — buttons with slightly different border-radii, colour tokens that diverged across brands, and a motion language nobody had formally defined.</p>
+                <p>Every design handoff involved re-explaining decisions. Engineers rebuilt components that already existed elsewhere. Accessibility annotations were inconsistent or missing entirely.</p>
               </div>
 
               <div class="cs-callout">
@@ -127,8 +120,8 @@
               <p class="cs-section__label">02 — Approach</p>
               <h2 class="cs-section__heading" id="approach-heading">Start with tokens. Let components follow.</h2>
               <div class="cs-section__body">
-                <p>Rather than jumping straight to a component library, we started with a token audit. We mapped every colour, spacing, radius, shadow, and typographic decision in use across all six products. Patterns emerged quickly — and so did the conflicts.</p>
-                <p>The token architecture came first because without a stable foundation, any component built would inevitably fracture under a new brand theme or dark mode requirement.</p>
+                <p>Rather than jumping straight to a component library, we started with a token audit. We mapped every colour, spacing, radius, shadow, and typographic decision in use across all products. The token architecture came first because without a stable foundation, any component built would inevitably fracture under a new brand theme or dark mode requirement.</p>
+                <p>Components were built with accessibility as a constraint from the start — keyboard navigation, ARIA roles, and focus management baked in. The Figma library mirrored the code so every prop had a corresponding variant designers could hand off confidently.</p>
               </div>
 
               <div class="cs-steps">
@@ -136,7 +129,7 @@
                   <span class="cs-step__num" aria-hidden="true">1</span>
                   <div class="cs-step__content">
                     <h4>Audit & inventory</h4>
-                    <p>Catalogued every design decision across 6 products — identifying the duplication and the genuine variation that needed to be preserved.</p>
+                    <p>Catalogued every design decision across all products — identifying duplication and genuine variation that needed to be preserved.</p>
                   </div>
                 </div>
                 <div class="cs-step">
@@ -150,60 +143,21 @@
                   <span class="cs-step__num" aria-hidden="true">3</span>
                   <div class="cs-step__content">
                     <h4>Component library</h4>
-                    <p>Built from the ground up with accessibility as a constraint, not a checklist — keyboard navigation, ARIA roles, and focus management baked in from the start.</p>
+                    <p>Built from the ground up with WCAG 2.1 as a constraint — keyboard navigation, ARIA roles, and focus management from the start.</p>
                   </div>
                 </div>
                 <div class="cs-step">
                   <span class="cs-step__num" aria-hidden="true">4</span>
                   <div class="cs-step__content">
                     <h4>Documentation & adoption</h4>
-                    <p>Published decision rationale, accessibility guidance, and component documentation. Ran onboarding sessions with each team.</p>
+                    <p>Published decision rationale and accessibility guidance. Ran onboarding sessions with each team to drive adoption.</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section class="cs-section reveal" id="token-architecture" aria-labelledby="token-heading">
-              <p class="cs-section__label">03 — Token Architecture</p>
-              <h2 class="cs-section__heading" id="token-heading">Three tiers. One source of truth.</h2>
-              <div class="cs-section__body">
-                <p>The token model has three distinct layers. Primitive tokens hold raw values — a specific hex colour or a pixel measurement with no semantic meaning attached. Semantic tokens reference primitives and carry intent: <code>color.interactive.default</code> tells you what the value <em>means</em>, not what it <em>is</em>. Component tokens map semantic tokens to specific component contexts.</p>
-                <p>This separation meant that switching from Brand A to Brand B required only updating which primitive each semantic token pointed to. Components never needed to change.</p>
-              </div>
-
-              <div class="cs-image-block" role="img" aria-label="Token architecture diagram — three-tier model showing primitives, semantics, and component tokens">
-                Token architecture diagram
-              </div>
-
-              <div class="cs-callout">
-                <p>Naming convention: <strong>[category].[variant].[state]</strong> — e.g. <code>color.interactive.hover</code>, <code>space.component.padding-sm</code>. Predictable, readable, grep-able.</p>
-              </div>
-            </section>
-
-            <section class="cs-section reveal" id="components" aria-labelledby="components-heading">
-              <p class="cs-section__label">04 — Components</p>
-              <h2 class="cs-section__heading" id="components-heading">Built once. Accessible by default.</h2>
-              <div class="cs-section__body">
-                <p>Every component was built with a strict accessibility contract: keyboard interaction model documented before code was written, ARIA patterns reviewed against WCAG 2.1, and focus management tested with VoiceOver and NVDA.</p>
-                <p>The Figma component library mirrored the code — every prop in code had a corresponding variant in Figma. Annotations directly on components described the accessibility intent so designers could hand off confidently.</p>
-              </div>
-
-              <div class="cs-image-block" role="img" aria-label="Component library overview — showing button, input, card, and navigation components">
-                Component library overview
-              </div>
-            </section>
-
-            <section class="cs-section reveal" id="documentation" aria-labelledby="docs-heading">
-              <p class="cs-section__label">05 — Documentation</p>
-              <h2 class="cs-section__heading" id="docs-heading">Documentation that answers the next question.</h2>
-              <div class="cs-section__body">
-                <p>Most design system documentation answers "how do I use this?". Our documentation also answers "why does it work this way?" and "what should I do when this component isn't quite right for my use case?".</p>
-                <p>Every component page includes: usage guidance, accessibility notes, keyboard interaction table, do/don't examples. The documentation became the primary onboarding surface for new designers and engineers joining the organisation.</p>
-              </div>
-            </section>
-
             <section class="cs-section reveal" id="figma-files" aria-labelledby="figma-heading">
-              <p class="cs-section__label">06 — Figma Files</p>
+              <p class="cs-section__label">03 — Figma Files</p>
               <h2 class="cs-section__heading" id="figma-heading">Design files</h2>
 
               <div class="cs-figma-files">
@@ -223,12 +177,7 @@
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/mEPhyDlqoKOVVd0qK8YAIn/OCCUS?node-id=4-3&t=FpmfhoZx8wK8r85C-1"
-                      allowfullscreen
-                      loading="lazy"
-                      title="Elia Group EPIC Customer Portal — Figma design file"
-                    ></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/mEPhyDlqoKOVVd0qK8YAIn/OCCUS?node-id=4-3&t=FpmfhoZx8wK8r85C-1" allowfullscreen loading="lazy" title="Elia Group EPIC Customer Portal — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -247,12 +196,7 @@
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/sRKNEbT1RTH2bhvh88VhbJ/Junior---User-Interface?node-id=306-1612&t=MIBfqpVMx04IuW1U-1"
-                      allowfullscreen
-                      loading="lazy"
-                      title="Junior AI Tool — Figma design file"
-                    ></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/sRKNEbT1RTH2bhvh88VhbJ/Junior---User-Interface?node-id=306-1612&t=MIBfqpVMx04IuW1U-1" allowfullscreen loading="lazy" title="Junior AI Tool — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -271,12 +215,7 @@
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/vqO2yQf2UQ3LmP5QCMfu3C/oneset-2026?node-id=306-1612&t=vJIiHAAPAez9xRgx-1"
-                      allowfullscreen
-                      loading="lazy"
-                      title="OneSet — Figma design file"
-                    ></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/vqO2yQf2UQ3LmP5QCMfu3C/oneset-2026?node-id=306-1612&t=vJIiHAAPAez9xRgx-1" allowfullscreen loading="lazy" title="OneSet — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -295,12 +234,7 @@
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/mVMGbkguQlzmL5uIOCnrLH/UI-Patterns-Library?node-id=2922-8890&t=P5c5QKXFU8zRyrZ8-1"
-                      allowfullscreen
-                      loading="lazy"
-                      title="UI Pattern Library — Figma design file"
-                    ></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/mVMGbkguQlzmL5uIOCnrLH/UI-Patterns-Library?node-id=2922-8890&t=P5c5QKXFU8zRyrZ8-1" allowfullscreen loading="lazy" title="UI Pattern Library — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -308,7 +242,7 @@
             </section>
 
             <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
-              <p class="cs-section__label">07 — Outcomes</p>
+              <p class="cs-section__label">04 — Outcomes</p>
               <h2 class="cs-section__heading" id="outcomes-heading">A shared language changes how teams work.</h2>
               <div class="cs-section__body">
                 <p>Across Elia Group, a consistent design language now runs through the customer portal and internal tools. Design handoff time dropped significantly as engineers had a stable, documented reference. New brand themes that previously took weeks could be delivered in days by updating semantic token mappings.</p>
@@ -328,7 +262,6 @@
                   <p class="cs-stat__label">Accessibility standard met across all components</p>
                 </div>
               </div>
-
             </section>
 
           </div>
@@ -338,7 +271,6 @@
 
   </main>
 
-  <!-- Project Navigation -->
   <nav class="cs-project-nav" aria-label="Project navigation">
     <div class="container">
       <a href="../index.html#projects" class="back-link" aria-label="Back to all projects">

@@ -81,9 +81,7 @@
 
           <aside class="cs-sidebar" aria-label="Case study sections">
             <a href="#problem" class="cs-sidebar__link">Problem</a>
-            <a href="#audit" class="cs-sidebar__link">Accessibility Audit</a>
-            <a href="#design" class="cs-sidebar__link">Design Decisions</a>
-            <a href="#testing" class="cs-sidebar__link">Testing</a>
+            <a href="#approach" class="cs-sidebar__link">Approach</a>
             <a href="#figma-files" class="cs-sidebar__link">Figma Files</a>
             <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
           </aside>
@@ -118,73 +116,41 @@
               </div>
             </section>
 
-            <section class="cs-section reveal" id="audit" aria-labelledby="audit-heading">
-              <p class="cs-section__label">02 — Accessibility Audit</p>
-              <h2 class="cs-section__heading" id="audit-heading">Eighteen failures. None of them surprising.</h2>
+            <section class="cs-section reveal" id="approach" aria-labelledby="approach-heading">
+              <p class="cs-section__label">02 — Approach</p>
+              <h2 class="cs-section__heading" id="approach-heading">Fix the foundation. Improve the whole.</h2>
               <div class="cs-section__body">
-                <p>We ran a structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs with VoiceOver (macOS/iOS) and NVDA (Windows). The failures clustered into four clear categories.</p>
+                <p>We ran a structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs with VoiceOver and NVDA. Failures clustered into four areas: focus management, form labelling, colour contrast, and status feedback.</p>
+                <p>Accessibility fixes rarely stay isolated — when you fix a focus state, you improve clarity for all users. The redesign addressed every audit failure and used those fixes as an opportunity to improve the overall UX of the flow. The progress indicator became a proper ARIA role, every form field got a persistent visible label, and error messages were rewritten to be specific and actionable.</p>
               </div>
 
               <div class="cs-steps">
                 <div class="cs-step">
-                  <span class="cs-step__num" aria-hidden="true">A</span>
+                  <span class="cs-step__num" aria-hidden="true">1</span>
                   <div class="cs-step__content">
-                    <h4>Focus management</h4>
-                    <p>No visible focus indicators anywhere in the flow. Focus didn't move to the modal on open, and the Escape key didn't close it. Tab order didn't follow visual reading order.</p>
+                    <h4>Accessibility audit</h4>
+                    <p>Structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs — 18 distinct failures across 4 categories.</p>
                   </div>
                 </div>
                 <div class="cs-step">
-                  <span class="cs-step__num" aria-hidden="true">B</span>
+                  <span class="cs-step__num" aria-hidden="true">2</span>
                   <div class="cs-step__content">
-                    <h4>Form labelling</h4>
-                    <p>Several inputs had placeholder text as the only label — which disappears on interaction. Error messages were positioned visually near inputs but not programmatically associated via <code>aria-describedby</code>.</p>
+                    <h4>Design decisions</h4>
+                    <p>Rebuilt focus states, form labels, error messaging, and progress indicators. Every fix improved usability for all users, not just those with assistive tech.</p>
                   </div>
                 </div>
                 <div class="cs-step">
-                  <span class="cs-step__num" aria-hidden="true">C</span>
+                  <span class="cs-step__num" aria-hidden="true">3</span>
                   <div class="cs-step__content">
-                    <h4>Colour contrast</h4>
-                    <p>The secondary button text failed 4.5:1 contrast ratio against its background. Helper text at 12px failed large-text thresholds. Status indicators used colour alone to convey meaning.</p>
+                    <h4>User testing</h4>
+                    <p>Recruited five participants who relied on screen readers daily. Three sessions surfaced issues the automated audit missed entirely.</p>
                   </div>
                 </div>
-                <div class="cs-step">
-                  <span class="cs-step__num" aria-hidden="true">D</span>
-                  <div class="cs-step__content">
-                    <h4>Status &amp; feedback</h4>
-                    <p>The progress indicator had no programmatic role or label. Success and error states changed visually but were never announced to screen readers via live regions.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section class="cs-section reveal" id="design" aria-labelledby="design-heading">
-              <p class="cs-section__label">03 — Design Decisions</p>
-              <h2 class="cs-section__heading" id="design-heading">Fix the foundation. Improve the whole.</h2>
-              <div class="cs-section__body">
-                <p>Accessibility fixes rarely stay isolated — when you fix a focus state, you're also improving clarity for all users. When you add a visible error message linked to its input, you reduce confusion for everyone. The redesign addressed every audit failure, but also used those fixes as an opportunity to improve the overall UX clarity of the flow.</p>
-                <p>The progress indicator became a proper <code>progressbar</code> ARIA role with a meaningful label. Every form field got a persistent, visible label above the input. Error messages were rewritten to be specific and actionable, not generic.</p>
-              </div>
-
-              <div class="cs-image-block" role="img" aria-label="Redesigned onboarding form — showing visible label above input, error message linked with aria-describedby, visible focus ring">
-                Redesigned form with labelling and focus states
-              </div>
-
-              <div class="cs-callout">
-                <p>A focus ring is not an eyesore — it's the cursor for keyboard users. We designed focus indicators that were visible and on-brand: 2px solid accent green, 3px offset.</p>
-              </div>
-            </section>
-
-            <section class="cs-section reveal" id="testing" aria-labelledby="testing-heading">
-              <p class="cs-section__label">04 — Testing</p>
-              <h2 class="cs-section__heading" id="testing-heading">Test with real users. Not just automated tools.</h2>
-              <div class="cs-section__body">
-                <p>Automated tools catch roughly 30–40% of accessibility issues. The rest require manual testing and, ideally, testing with people who rely on assistive technology daily. We recruited five participants who used screen readers as their primary means of browsing, and conducted moderated usability sessions with the prototype.</p>
-                <p>Three sessions surfaced issues the automated audit had missed entirely — a custom dropdown that announced incorrectly, a date picker that trapped keyboard focus, and a success animation that caused a WCAG 2.3.3 motion violation.</p>
               </div>
             </section>
 
             <section class="cs-section reveal" id="figma-files" aria-labelledby="figma-heading">
-              <p class="cs-section__label">05 — Figma Files</p>
+              <p class="cs-section__label">03 — Figma Files</p>
               <h2 class="cs-section__heading" id="figma-heading">Design files</h2>
 
               <div class="cs-figma-files">
@@ -204,12 +170,7 @@
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe
-                      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1"
-                      allowfullscreen
-                      loading="lazy"
-                      title="Go4Jobs — Figma design file"
-                    ></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1" allowfullscreen loading="lazy" title="Go4Jobs — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -217,7 +178,7 @@
             </section>
 
             <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
-              <p class="cs-section__label">06 — Outcomes</p>
+              <p class="cs-section__label">04 — Outcomes</p>
               <h2 class="cs-section__heading" id="outcomes-heading">Better access. Better completion. Better product.</h2>
               <div class="cs-section__body">
                 <p>Post-launch metrics showed a 23% improvement in onboarding completion rate overall — not just for users with assistive technology. Support tickets from users encountering errors in the flow dropped by 61% within the first month. The product passed a third-party WCAG 2.1 AA audit with no critical or serious failures.</p>
@@ -237,7 +198,6 @@
                   <p class="cs-stat__label">WCAG 2.1 — passed third-party audit</p>
                 </div>
               </div>
-
             </section>
 
           </div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[PROJECT NAME] — Case Study by Erhan Lammar. [SHORT DESCRIPTION]" />
+  <title>[PROJECT NAME] — Erhan Lammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html" class="nav__logo" aria-label="Erhan Lammar — Home">
+        <span aria-hidden="true">EL</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+        <li><a href="../index.html#systems" class="nav__link">Systems</a></li>
+        <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── Hero ── -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="container reveal">
+
+        <div class="cs-hero__back">
+          <a href="../index.html#projects" class="back-link" aria-label="Go back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Go back
+          </a>
+        </div>
+
+        <!-- Tags: add/remove as needed -->
+        <div class="cs-hero__tags">
+          <span class="cs-hero__tag">[Tag 1]</span>
+          <span class="cs-hero__tag">[Tag 2]</span>
+          <span class="cs-hero__tag">[Tag 3]</span>
+        </div>
+
+        <h1 class="cs-hero__title" id="cs-title">[Project Name]</h1>
+        <p class="cs-hero__summary">
+          [One or two sentence summary of the project and your role.]
+        </p>
+
+        <!-- Meta: update labels/values to match the project -->
+        <dl class="cs-hero__meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Role</dt>
+            <dd class="cs-meta-item__value">[Your Role]</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Client</dt>
+            <dd class="cs-meta-item__value">[Client Name]</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Year</dt>
+            <dd class="cs-meta-item__value">[Year]</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-item__label">Tools</dt>
+            <dd class="cs-meta-item__value">Figma · [Other tools]</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ── Body ── -->
+    <div class="cs-body">
+      <div class="container">
+        <div class="cs-body__grid">
+
+          <!-- Sidebar navigation — mirror the section IDs below -->
+          <aside class="cs-sidebar" aria-label="Case study sections">
+            <a href="#problem" class="cs-sidebar__link">Problem</a>
+            <a href="#approach" class="cs-sidebar__link">Approach</a>
+            <a href="#figma-files" class="cs-sidebar__link">Figma Files</a>
+            <a href="#outcomes" class="cs-sidebar__link">Outcomes</a>
+          </aside>
+
+          <div class="cs-content">
+
+            <!-- ── 01 Problem ── -->
+            <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
+              <p class="cs-section__label">01 — Problem</p>
+              <h2 class="cs-section__heading" id="problem-heading">[Problem heading]</h2>
+              <div class="cs-section__body">
+                <p>[Describe the problem or challenge this project addressed.]</p>
+              </div>
+
+              <!-- Optional callout quote -->
+              <div class="cs-callout">
+                <p>[A short insight, quote, or key statement that captures the challenge.]</p>
+              </div>
+
+              <!-- Optional stats — remove if not needed -->
+              <div class="cs-stats">
+                <div class="cs-stat">
+                  <p class="cs-stat__value">[Value]</p>
+                  <p class="cs-stat__label">[Stat label]</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">[Value]</p>
+                  <p class="cs-stat__label">[Stat label]</p>
+                </div>
+                <div class="cs-stat">
+                  <p class="cs-stat__value">[Value]</p>
+                  <p class="cs-stat__label">[Stat label]</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ── 02 Approach ── -->
+            <section class="cs-section reveal" id="approach" aria-labelledby="approach-heading">
+              <p class="cs-section__label">02 — Approach</p>
+              <h2 class="cs-section__heading" id="approach-heading">[Approach heading]</h2>
+
+              <!-- Numbered steps — add or remove as needed -->
+              <div class="cs-steps">
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">1</span>
+                  <div class="cs-step__content">
+                    <h4>[Step title]</h4>
+                    <p>[Step description — optional, remove p tag if not needed.]</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">2</span>
+                  <div class="cs-step__content">
+                    <h4>[Step title]</h4>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">3</span>
+                  <div class="cs-step__content">
+                    <h4>[Step title]</h4>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ── 03 Figma Files ── -->
+            <section class="cs-section reveal" id="figma-files" aria-labelledby="figma-heading">
+              <p class="cs-section__label">03 — Figma Files</p>
+              <h2 class="cs-section__heading" id="figma-heading">Design files</h2>
+
+              <div class="cs-figma-files">
+
+                <!-- Repeat this block for each Figma file -->
+                <div class="cs-figma-file">
+                  <div class="cs-figma-file__header">
+                    <svg class="cs-figma-file__icon" width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                      <path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/>
+                      <path d="M9.5 47.5A9.5 9.5 0 0 1 19 38v9.5a9.5 9.5 0 0 1-9.5 9.5z" fill="#0ACF83"/>
+                      <path d="M0 28.5A9.5 9.5 0 0 1 9.5 19H19v9.5A9.5 9.5 0 0 1 9.5 38 9.5 9.5 0 0 1 0 28.5z" fill="#FF7262"/>
+                      <path d="M0 9.5A9.5 9.5 0 0 1 9.5 0H19v19H9.5A9.5 9.5 0 0 1 0 9.5z" fill="#F24E1E"/>
+                      <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
+                    </svg>
+                    <div>
+                      <p class="cs-figma-file__name">[Figma File Name]</p>
+                      <a href="[FIGMA URL]" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                    </div>
+                  </div>
+                  <div class="cs-figma-embed">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=[FIGMA URL]" allowfullscreen loading="lazy" title="[Figma File Name] — Figma design file"></iframe>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- ── 04 Outcomes ── -->
+            <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
+              <p class="cs-section__label">04 — Outcomes</p>
+              <h2 class="cs-section__heading" id="outcomes-heading">[Outcomes heading]</h2>
+              <div class="cs-section__body">
+                <p>[Describe the results, impact, or what was achieved.]</p>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Project Navigation ── -->
+  <nav class="cs-project-nav" aria-label="Project navigation">
+    <div class="container">
+      <!-- Previous: update href and title, or remove if first project -->
+      <a href="[PREV-PAGE].html" class="cs-project-nav__link">
+        <span class="cs-project-nav__dir">Previous Project</span>
+        <span class="cs-project-nav__title">← [Previous Project Name]</span>
+      </a>
+      <!-- Next: update href and title, or remove if last project -->
+      <a href="[NEXT-PAGE].html" class="cs-project-nav__link cs-project-nav__link--next">
+        <span class="cs-project-nav__dir">Next Project</span>
+        <span class="cs-project-nav__title">[Next Project Name] →</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="site-footer__copy">&copy; <span class="year"></span> Erhan Lammar</p>
+      <p class="site-footer__note">Built with intentionality and low emissions in mind.</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    const sidebarLinks = document.querySelectorAll('.cs-sidebar__link');
+    const csSections = document.querySelectorAll('.cs-section[id]');
+    const sidebarObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(l => l.classList.remove('is-active'));
+          const active = document.querySelector(`.cs-sidebar__link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.4 });
+    csSections.forEach(s => sidebarObserver.observe(s));
+  </script>
+</body>
+</html>

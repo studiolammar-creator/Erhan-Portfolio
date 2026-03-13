@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Go4Jobs — Case Study by Erhan Lammar. Redesigning a product's onboarding flow to meet WCAG AA." />
-  <title>Go4Jobs — Erhan Lammar</title>
+  <meta name="description" content="Degroof Petercam — Case Study by Erhan Lammar. UI design for investment evolution and design system." />
+  <title>Degroof Petercam — Erhan Lammar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -43,31 +43,32 @@
         </div>
 
         <div class="cs-hero__tags">
+          <span class="cs-hero__tag">Sustainability</span>
+          <span class="cs-hero__tag">Data Visualisation</span>
           <span class="cs-hero__tag">UI Design</span>
-          <span class="cs-hero__tag">Design System</span>
         </div>
 
-        <h1 class="cs-hero__title" id="cs-title">Go4Jobs</h1>
+        <h1 class="cs-hero__title" id="cs-title">Degroof Petercam</h1>
         <p class="cs-hero__summary">
-          The Pàu Studio (in house agency) asked me to help them during the Design gate to translate the Wireframes to a visual flow and make it fully development ready.
+          Turning dense carbon emissions data into clear, actionable insight — a sustainability metrics UI designed for non-technical users at a green-tech startup.
         </p>
 
         <dl class="cs-hero__meta">
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Role</dt>
-            <dd class="cs-meta-item__value">UI Designer</dd>
+            <dd class="cs-meta-item__value">Lead UI Designer</dd>
           </div>
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Client</dt>
-            <dd class="cs-meta-item__value">Go4Jobs</dd>
+            <dd class="cs-meta-item__value">Degroof Petercam</dd>
           </div>
           <div class="cs-meta-item">
-            <dt class="cs-meta-item__label">Product</dt>
-            <dd class="cs-meta-item__value">Responsive Website</dd>
+            <dt class="cs-meta-item__label">Team</dt>
+            <dd class="cs-meta-item__value">1 designer · 2 engineers · 1 data analyst</dd>
           </div>
           <div class="cs-meta-item">
             <dt class="cs-meta-item__label">Tools</dt>
-            <dd class="cs-meta-item__value">Figma</dd>
+            <dd class="cs-meta-item__value">Figma · Claude Code · Cursor</dd>
           </div>
         </dl>
 
@@ -89,60 +90,67 @@
 
             <section class="cs-section reveal" id="problem" aria-labelledby="problem-heading">
               <p class="cs-section__label">01 — Problem</p>
-              <h2 class="cs-section__heading" id="problem-heading">A 40% drop-off nobody had investigated.</h2>
+              <h2 class="cs-section__heading" id="problem-heading">Data that only data scientists could read.</h2>
               <div class="cs-section__body">
-                <p>The existing onboarding flow had a persistent 40% drop-off on the third step. Analytics showed the problem clearly; they didn't show <em>why</em>. When we reviewed support tickets, a pattern emerged — a significant proportion came from users with assistive technology who couldn't complete the flow at all.</p>
-                <p>The form had no visible focus states. Error messages weren't linked to their inputs. The multi-step progress indicator was decoration, not information. Keyboard users could tab into a modal but couldn't escape it without a mouse.</p>
+                <p>The startup had built a powerful carbon accounting engine — it could ingest emissions data across Scope 1, 2, and 3, model reduction scenarios, and benchmark against industry standards. But the interface had been designed by engineers for engineers. When they started selling to sustainability managers and finance teams, the product fell flat.</p>
+                <p>The dashboard showed everything at once: thirty-seven data points on a single screen, six different chart types, and a colour system that conveyed no consistent meaning.</p>
               </div>
 
               <div class="cs-callout">
-                <p>"I've tried three times. The form submits but nothing happens and there's no feedback from my screen reader." — User feedback ticket</p>
+                <p>"We know the data is right. The problem is our users open the dashboard and immediately feel overwhelmed. They close it and email us instead." — Product Manager</p>
               </div>
 
               <div class="cs-stats">
                 <div class="cs-stat">
-                  <p class="cs-stat__value">40%</p>
-                  <p class="cs-stat__label">Drop-off on step 3 before redesign</p>
+                  <p class="cs-stat__value">37</p>
+                  <p class="cs-stat__label">Data points shown simultaneously on landing</p>
                 </div>
                 <div class="cs-stat">
-                  <p class="cs-stat__value">0</p>
-                  <p class="cs-stat__label">WCAG AA criteria met in original flow</p>
+                  <p class="cs-stat__value">6</p>
+                  <p class="cs-stat__label">Inconsistent chart types in original design</p>
                 </div>
                 <div class="cs-stat">
-                  <p class="cs-stat__value">18</p>
-                  <p class="cs-stat__label">Distinct accessibility failures found in audit</p>
+                  <p class="cs-stat__value">22%</p>
+                  <p class="cs-stat__label">Weekly active users on dashboard features</p>
                 </div>
               </div>
             </section>
 
             <section class="cs-section reveal" id="approach" aria-labelledby="approach-heading">
               <p class="cs-section__label">02 — Approach</p>
-              <h2 class="cs-section__heading" id="approach-heading">Fix the foundation. Improve the whole.</h2>
+              <h2 class="cs-section__heading" id="approach-heading">One number to rule them all.</h2>
               <div class="cs-section__body">
-                <p>We ran a structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs with VoiceOver and NVDA. Failures clustered into four areas: focus management, form labelling, colour contrast, and status feedback.</p>
-                <p>Accessibility fixes rarely stay isolated — when you fix a focus state, you improve clarity for all users. The redesign addressed every audit failure and used those fixes as an opportunity to improve the overall UX of the flow. The progress indicator became a proper ARIA role, every form field got a persistent visible label, and error messages were rewritten to be specific and actionable.</p>
+                <p>Research surfaced two distinct user types: Sustainability Managers who needed a clear narrative, and Finance Directors who needed specificity. We structured the IA around three questions users actually asked: "How are we doing overall?" → "Where are our biggest emissions?" → "What can we do about it?"</p>
+                <p>We reduced from six chart types to three. Colour was given systematic meaning: green for on-track, amber for at-risk. We also applied green design principles to the interface itself — minimising JavaScript, using lightweight chart libraries, and benchmarking the page's own carbon footprint.</p>
               </div>
 
               <div class="cs-steps">
                 <div class="cs-step">
                   <span class="cs-step__num" aria-hidden="true">1</span>
                   <div class="cs-step__content">
-                    <h4>Accessibility audit</h4>
-                    <p>Structured audit using axe DevTools, manual keyboard testing, and screen reader walkthroughs — 18 distinct failures across 4 categories.</p>
+                    <h4>User research</h4>
+                    <p>Identified two distinct user types with different goals — Sustainability Managers and Finance Directors — and designed progressive disclosure paths for both.</p>
                   </div>
                 </div>
                 <div class="cs-step">
                   <span class="cs-step__num" aria-hidden="true">2</span>
                   <div class="cs-step__content">
-                    <h4>Design decisions</h4>
-                    <p>Rebuilt focus states, form labels, error messaging, and progress indicators. Every fix improved usability for all users, not just those with assistive tech.</p>
+                    <h4>IA & hierarchy</h4>
+                    <p>Reduced the entry point to a single headline metric. Structured the dashboard around three user questions with a clear information flow.</p>
                   </div>
                 </div>
                 <div class="cs-step">
                   <span class="cs-step__num" aria-hidden="true">3</span>
                   <div class="cs-step__content">
-                    <h4>User testing</h4>
-                    <p>Recruited five participants who relied on screen readers daily. Three sessions surfaced issues the automated audit missed entirely.</p>
+                    <h4>Chart design</h4>
+                    <p>Down from 6 chart types to 3. Systematic colour meaning across all charts. Every status had a text label and icon — colour never the sole signal.</p>
+                  </div>
+                </div>
+                <div class="cs-step">
+                  <span class="cs-step__num" aria-hidden="true">4</span>
+                  <div class="cs-step__content">
+                    <h4>Sustainable UI</h4>
+                    <p>Minimised JS dependencies, used lightweight chart libraries, and benchmarked the page's carbon footprint before and after. Redesigned version was 68% lighter.</p>
                   </div>
                 </div>
               </div>
@@ -164,12 +172,31 @@
                       <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
                     </svg>
                     <div>
-                      <p class="cs-figma-file__name">Go4Jobs — UI Design</p>
-                      <a href="https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                      <p class="cs-figma-file__name">Investment Evolution</p>
+                      <a href="https://www.figma.com/design/Ur5UqNdfGPD0rXv11Gc4MR/Investment---evolution?node-id=1-271&t=l48PeOors8O9WQA1-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
                     </div>
                   </div>
                   <div class="cs-figma-embed">
-                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/j2U70NhSevOdY8zw9XwZp0/Go4Jobs?node-id=1-11&t=SyAMFSxtKdZRba7g-1" allowfullscreen loading="lazy" title="Go4Jobs — Figma design file"></iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/Ur5UqNdfGPD0rXv11Gc4MR/Investment---evolution?node-id=1-271&t=l48PeOors8O9WQA1-1" allowfullscreen loading="lazy" title="Degroof Petercam Investment Evolution — Figma design file"></iframe>
+                  </div>
+                </div>
+
+                <div class="cs-figma-file">
+                  <div class="cs-figma-file__header">
+                    <svg class="cs-figma-file__icon" width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                      <path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/>
+                      <path d="M9.5 47.5A9.5 9.5 0 0 1 19 38v9.5a9.5 9.5 0 0 1-9.5 9.5z" fill="#0ACF83"/>
+                      <path d="M0 28.5A9.5 9.5 0 0 1 9.5 19H19v9.5A9.5 9.5 0 0 1 9.5 38 9.5 9.5 0 0 1 0 28.5z" fill="#FF7262"/>
+                      <path d="M0 9.5A9.5 9.5 0 0 1 9.5 0H19v19H9.5A9.5 9.5 0 0 1 0 9.5z" fill="#F24E1E"/>
+                      <path d="M19 0h9.5a9.5 9.5 0 0 1 0 19H19z" fill="#FF7262"/>
+                    </svg>
+                    <div>
+                      <p class="cs-figma-file__name">Design System 1.0</p>
+                      <a href="https://www.figma.com/design/BAguh6VVa8h8h5rDxrqQUL/Design-system-1.0?node-id=0-1&t=UbPZy7MkUebYOFxY-1" class="cs-figma-file__link" target="_blank" rel="noopener noreferrer">Open in Figma →</a>
+                    </div>
+                  </div>
+                  <div class="cs-figma-embed">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/BAguh6VVa8h8h5rDxrqQUL/Design-system-1.0?node-id=0-1&t=UbPZy7MkUebYOFxY-1" allowfullscreen loading="lazy" title="Degroof Petercam Design System 1.0 — Figma design file"></iframe>
                   </div>
                 </div>
 
@@ -178,23 +205,23 @@
 
             <section class="cs-section reveal" id="outcomes" aria-labelledby="outcomes-heading">
               <p class="cs-section__label">04 — Outcomes</p>
-              <h2 class="cs-section__heading" id="outcomes-heading">Better access. Better completion. Better product.</h2>
+              <h2 class="cs-section__heading" id="outcomes-heading">Clear data. Engaged users. Fewer support calls.</h2>
               <div class="cs-section__body">
-                <p>Post-launch metrics showed a 23% improvement in onboarding completion rate overall — not just for users with assistive technology. Support tickets from users encountering errors in the flow dropped by 61% within the first month. The product passed a third-party WCAG 2.1 AA audit with no critical or serious failures.</p>
+                <p>Three months after launch, weekly active usage of dashboard features had nearly quadrupled. Users were spending more time exploring the reduction opportunities — the behaviour the product team had always wanted but never achieved.</p>
               </div>
 
               <div class="cs-stats">
                 <div class="cs-stat">
-                  <p class="cs-stat__value">+23%</p>
-                  <p class="cs-stat__label">Onboarding completion rate improvement</p>
+                  <p class="cs-stat__value">81%</p>
+                  <p class="cs-stat__label">Weekly active users on dashboard features</p>
                 </div>
                 <div class="cs-stat">
-                  <p class="cs-stat__value">−61%</p>
-                  <p class="cs-stat__label">Support tickets related to onboarding errors</p>
+                  <p class="cs-stat__value">−74%</p>
+                  <p class="cs-stat__label">Support tickets asking "what does this mean?"</p>
                 </div>
                 <div class="cs-stat">
-                  <p class="cs-stat__value">AA</p>
-                  <p class="cs-stat__label">WCAG 2.1 — passed third-party audit</p>
+                  <p class="cs-stat__value">4.6/5</p>
+                  <p class="cs-stat__label">User satisfaction score in post-launch survey</p>
                 </div>
               </div>
             </section>
@@ -208,13 +235,13 @@
 
   <nav class="cs-project-nav" aria-label="Project navigation">
     <div class="container">
-      <a href="elia-group.html" class="cs-project-nav__link">
+      <a href="go4jobs.html" class="cs-project-nav__link">
         <span class="cs-project-nav__dir">Previous Project</span>
-        <span class="cs-project-nav__title">← Elia Group</span>
+        <span class="cs-project-nav__title">← Go4Jobs</span>
       </a>
-      <a href="Go4jobs.html" class="cs-project-nav__link cs-project-nav__link--next">
-        <span class="cs-project-nav__dir">Next Project</span>
-        <span class="cs-project-nav__title">Degroof Petercam →</span>
+      <a href="../index.html#projects" class="cs-project-nav__link cs-project-nav__link--next">
+        <span class="cs-project-nav__dir">All Projects</span>
+        <span class="cs-project-nav__title">Back to Portfolio →</span>
       </a>
     </div>
   </nav>

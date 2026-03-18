@@ -312,8 +312,12 @@ ul { list-style: none; }
 .nav__toggle[aria-expanded="true"] .nav__toggle-icon--open { display: none; }
 .nav__toggle[aria-expanded="true"] .nav__toggle-icon--close { display: block; }
 
+/* Home link — mobile only */
+.nav__links-home { display: none; }
+
 /* ── Mobile styles ── */
 @media (max-width: 767px) {
+  .nav__links-home { display: block; }
   .nav__toggle { display: flex; }
 
   .nav__links {

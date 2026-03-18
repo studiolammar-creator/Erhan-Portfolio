@@ -101,6 +101,52 @@
     });
   }
 
+  /* ── Mobile nav toggle ── */
+  function initMobileNav() {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!toggle || !menu) return;
+
+    function openMenu() {
+      menu.dataset.open = 'true';
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close navigation');
+    }
+
+    function closeMenu() {
+      menu.dataset.open = 'false';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation');
+    }
+
+    toggle.addEventListener('click', () => {
+      toggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+    });
+
+    // Close when a nav link is clicked
+    menu.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (
+        toggle.getAttribute('aria-expanded') === 'true' &&
+        !toggle.closest('.nav').contains(e.target)
+      ) {
+        closeMenu();
+      }
+    });
+  }
+
   /* ── Theme toggle ── */
   function initThemeToggle() {
     const btn = document.getElementById('theme-toggle');
@@ -133,6 +179,7 @@
     initActiveNav();
     initSmoothScroll();
     initThemeToggle();
+    initMobileNav();
   });
 
 })();

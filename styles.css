@@ -266,6 +266,99 @@ ul { list-style: none; }
   :root:not([data-theme]) .nav__theme-toggle .icon-sun  { display: block; }
 }
 
+/* ── Mobile nav controls wrapper ── */
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* ── Hamburger toggle ── */
+.nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nav__toggle:hover,
+.nav__toggle:focus-visible {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.nav__toggle-icon { display: none; }
+.nav__toggle-icon--open { display: block; }
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon--open { display: none; }
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon--close { display: block; }
+
+/* ── Mobile styles ── */
+@media (max-width: 767px) {
+  .nav__toggle { display: flex; }
+
+  .nav__links {
+    position: fixed;
+    top: 68px; /* matches nav height: 16px padding × 2 + 36px button */
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-3);
+    overflow-y: auto;
+
+    visibility: hidden;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition:
+      transform var(--transition-med),
+      visibility 0ms var(--transition-med);
+  }
+
+  .nav__links[data-open="true"] {
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+    transition:
+      transform var(--transition-med),
+      visibility 0ms;
+  }
+
+  .nav__links li {
+    width: 100%;
+  }
+
+  .nav__link {
+    display: block;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-base);
+  }
+
+  .nav__links li:last-child .nav__link {
+    border-bottom: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav__links {
+    transition: none;
+  }
+}
+
 /* ── Section Base ── */
 .section {
   padding-block: var(--space-12);

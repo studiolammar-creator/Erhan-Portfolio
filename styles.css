@@ -1155,10 +1155,11 @@ ul { list-style: none; }
 /* ── Case Study Sections ── */
 .cs-section {
   scroll-margin-top: calc(60px + var(--space-6));
+  padding-bottom: 48px;
 }
 
 .cs-section + .cs-section {
-  padding-top: var(--space-10);
+  padding-top: 48px;
   border-top: 1px solid var(--color-border);
 }
 

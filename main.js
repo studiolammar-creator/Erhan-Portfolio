@@ -172,6 +172,23 @@
     });
   }
 
+  /* ── Figma file collapsibles ── */
+  function initFigmaCollapsibles() {
+    document.querySelectorAll('.cs-figma-file__toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const file = toggle.closest('.cs-figma-file');
+        const embed = file.querySelector('.cs-figma-embed');
+        const isOpen = file.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        if (isOpen) {
+          embed.removeAttribute('hidden');
+        } else {
+          embed.setAttribute('hidden', '');
+        }
+      });
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', () => {
     initHero();
@@ -180,6 +197,7 @@
     initSmoothScroll();
     initThemeToggle();
     initMobileNav();
+    initFigmaCollapsibles();
   });
 
 })();

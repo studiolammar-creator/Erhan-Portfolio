@@ -1036,6 +1036,10 @@ ul { list-style: none; }
   text-decoration: underline;
 }
 
+.cs-figma-file:not(.is-open) .cs-figma-file__link {
+  display: none;
+}
+
 .cs-figma-embed {
   position: relative;
   width: 100%;
